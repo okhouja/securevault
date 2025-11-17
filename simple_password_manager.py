@@ -177,6 +177,40 @@ def load_passwords(master_password):
 # Part 5: Main Program (Menu)
 # -----------------------------
 
+def change_master_password(passwords, old_master_password):
+    """Change the master password"""
+    print("\n" + "=" * 50)
+    print("CHANGE MASTER PASSWORD")
+    print("=" * 50)
+    
+    # Ask for new master password
+    new_password = getpass.getpass("\n🔑 Enter NEW master password: ")
+    confirm_password = getpass.getpass("🔑 Confirm NEW master password: ")
+    
+    # Check if they match
+    if new_password != confirm_password:
+        print("✗ Passwords don't match!")
+        return old_master_password
+    
+    # Check strength of new password
+    score, rating = check_password_strength(new_password)
+    print(f"\nNew password strength: {rating} ({score}/100)")
+    
+    if score < 60:
+        confirm = input("\n⚠️  Warning: Password is not very strong. Continue? (yes/no): ")
+        if confirm.lower() != "yes":
+            print("Cancelled.")
+            return old_master_password
+    
+    # Save with new master password
+    save_passwords(passwords, new_password)
+    
+    print("\n✓ Master password changed successfully!")
+    print("⚠️  Remember your new password - it cannot be recovered!")
+    
+    return new_password
+
+
 def main():
     print("=" * 50)
     print("PASSWORD MANAGER - Simple Version")
@@ -204,10 +238,11 @@ def main():
         print("3. Add password to vault")
         print("4. View all passwords")
         print("5. Search password")
-        print("6. Exit")
+        print("6. Change master password")
+        print("7. Exit")
         print("-" * 50)
         
-        choice = input("\nChoose (1-6): ")
+        choice = input("\nChoose (1-7): ")
         
         if choice == "1":
             # Generate password
@@ -284,6 +319,10 @@ def main():
                 print("No matching passwords found.")
         
         elif choice == "6":
+            # Change master password
+            master_password = change_master_password(passwords, master_password)
+        
+        elif choice == "7":
             # Exit
             print("\nGoodbye! Your passwords are safe.")
             break

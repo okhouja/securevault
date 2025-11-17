@@ -5,7 +5,7 @@
 **Authors:** Omar Khouja & Juan Carlos Lazo  
 **Course:** ReDI School Python Foundations - Hamburg  
 **Date:** November 2025  
-
+**Submission Deadline:** December 8, 2025
 
 ---
 
@@ -95,6 +95,7 @@ Evaluates password security based on:
 - Add new passwords with website/username
 - View all stored passwords
 - Search by website or username
+- **Change master password securely**
 - Simple, intuitive menu interface
 
 ---
@@ -140,7 +141,8 @@ MENU:
 3. Add password to vault      → Store a new password
 4. View all passwords         → Display all saved passwords
 5. Search password            → Find specific entry
-6. Exit                       → Close program securely
+6. Change master password     → Update your master password securely
+7. Exit                       → Close program securely
 ```
 
 ---
@@ -178,7 +180,7 @@ Feedback:
 ```
 Choose (1-6): 3
 Website/App: gmail.com
-Username: someone@gmail.com
+Username: juan.carlos@gmail.com
 
 1. Generate new password
 2. Enter my own password
@@ -197,11 +199,11 @@ Choose (1-6): 4
 --- ALL PASSWORDS ---
 
 1. gmail.com
-   Username: someone@gmail.com
+   Username: juan.carlos@gmail.com
    Password: kT8@mP3!xR5z
    
 2. github.com
-   Username: omar987x
+   Username: okhouja
    Password: Xp9#kR5@mT2z
 
 Total: 2 passwords stored
@@ -273,14 +275,17 @@ def load_passwords(master_password):
 
 ### Part 5: Main Program (70 lines)
 ```python
+def change_master_password(passwords, old_master_password):
+    """Change master password and re-encrypt data"""
+
 def main():
     """Interactive menu system"""
     # Load passwords
-    # Display menu
+    # Display menu (7 options)
     # Handle user choices
 ```
 
-**Total: ~200 lines of clean, well-commented code**
+**Total: ~235 lines of clean, well-commented code**
 
 ---
 
@@ -364,8 +369,8 @@ We tested the program with:
 
 | Metric | Value |
 |--------|-------|
-| **Lines of Code** | ~200 |
-| **Functions** | 5 main functions |
+| **Lines of Code** | ~235 |
+| **Functions** | 6 main functions |
 | **Development Time** | 2 weeks |
 | **Team Size** | 2 people |
 | **Python Version** | 3.8+ |
@@ -375,7 +380,7 @@ We tested the program with:
 
 ## 🎤 Presentation
 
-We presented this project at ReDI School Hamburg at December 8, 2025.
+We presented this project at ReDI School Hamburg untill December 8, 2025.
 
 **Presentation Structure:**
 1. **Introduction** (Omar) - Problem statement
@@ -446,6 +451,6 @@ For questions or feedback:
 
 ---
 
-**Last Updated:** November 14, 2025  
-**Version:** 1.0  
+**Last Updated:** November 17, 2025  
+**Version:** 1.1  
 **Status:** ✅ Ready for submission
