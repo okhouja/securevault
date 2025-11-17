@@ -375,7 +375,7 @@ We tested the program with:
 
 ## 🎤 Presentation
 
-We presented this project at ReDI School Hamburg on December 8, 2024.
+We presented this project at ReDI School Hamburg at December 8, 2025.
 
 **Presentation Structure:**
 1. **Introduction** (Omar) - Problem statement
@@ -431,7 +431,7 @@ For questions or feedback:
 ---
 
 **Built with ❤️ in Hamburg**  
-**ReDI School Python Foundations - November 2024**
+**ReDI School Python Foundations - November 2025**
 
 ---
 
