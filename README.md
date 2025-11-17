@@ -178,7 +178,7 @@ Feedback:
 ```
 Choose (1-6): 3
 Website/App: gmail.com
-Username: juan.carlos@gmail.com
+Username: someone@gmail.com
 
 1. Generate new password
 2. Enter my own password
@@ -197,11 +197,11 @@ Choose (1-6): 4
 --- ALL PASSWORDS ---
 
 1. gmail.com
-   Username: juan.carlos@gmail.com
+   Username: someone@gmail.com
    Password: kT8@mP3!xR5z
    
 2. github.com
-   Username: okhouja
+   Username: omar987x
    Password: Xp9#kR5@mT2z
 
 Total: 2 passwords stored
